@@ -31,6 +31,7 @@ function activateMenuAtCurrentSection(section)
     const sectionId = section.getAttribute('id')
     const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
 
+
     menuElement.classList.remove('active')
     if (sectionBoundaries) {
         menuElement.classList.add('active')
@@ -40,7 +41,8 @@ function activateMenuAtCurrentSection(section)
 
 function showNavOnScroll()
 {
-    
+
+    const navigation = document.getElementById('navigation')
     if(scrollY > 0) {
         navigation.classList.add('scroll')
     }
